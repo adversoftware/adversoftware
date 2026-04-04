@@ -1,510 +1,795 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>adver.software — We'll Make Your Dream Website</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>adver.software — Designing Forward</title>
+  <meta name="description" content="Websites, brands, and intelligent systems — engineered for what comes next. Based in India, serving USA and Malaysia.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="mainNav">
-  <div class="nav-logo">
-    <img src="images/ADVER 2.svg" alt="adver.software logo">
-    <span>adver<span class="dot">.</span>software</span>
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"><span>view</span></div>
+
+<!-- LOADING CURTAIN -->
+<div class="loading-curtain">
+  <div class="curtain-left"></div>
+  <div class="curtain-right"></div>
+  <div class="curtain-logo" style="opacity:0; transform:translate(-50%,-50%) scale(0.9);">
+    <img src="images/ADVER 2.svg" alt="adver.software">
   </div>
-  <div class="nav-links" id="navLinks">
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#intelligence">AI / CI</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#faq">FAQ</a>
+  <div class="curtain-line"></div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <img src="images/ADVER 2.svg" alt="adver.software">
+  </a>
+  <div class="nav-links">
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#philosophy" class="nav-link">Philosophy</a>
+    <a href="#pricing" class="nav-link">Pricing</a>
+    <a href="#contact" class="nav-link">Contact</a>
   </div>
-  <div class="nav-right" id="navRight">
-    <button class="btn-glass">+91 8853 355 153</button>
-    <button class="btn-green">Get a Quote</button>
+  <div class="nav-right-group">
+    <div class="theme-switcher">
+      <button class="theme-btn" aria-label="Change theme">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <span class="theme-btn-label">Theme</span>
+        <svg class="theme-chevron" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="theme-dropdown">
+        <button class="theme-option active" data-theme="greenpixel"><span class="theme-swatch" style="background:#3dff7a;"></span>GreenPixel</button>
+        <button class="theme-option" data-theme="glassmorphism"><span class="theme-swatch" style="background:linear-gradient(135deg,#60a5fa,#a78bfa);"></span>Glassmorphism</button>
+        <button class="theme-option" data-theme="neumorphism"><span class="theme-swatch" style="background:#e0e5ec;"></span>Neumorphism</button>
+        <button class="theme-option" data-theme="luxury"><span class="theme-swatch" style="background:linear-gradient(135deg,#d4a853,#f5e6a3);"></span>Luxury</button>
+        <button class="theme-option" data-theme="retro"><span class="theme-swatch" style="background:#c0c0c0;"></span>Retro</button>
+        <button class="theme-option" data-theme="brutalist"><span class="theme-swatch" style="background:#fff;"></span>Brutalist</button>
+      </div>
+    </div>
+    <a href="#contact" class="nav-cta"><span>Get a Quote</span></a>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-    <div class="hamburger-icon"></div>
+  <button class="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- MOBILE NAV MENU -->
-<div class="mobile-menu" id="mobileMenu">
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
   <a href="#services" class="mobile-menu-link">Services</a>
   <a href="#projects" class="mobile-menu-link">Projects</a>
-  <a href="#intelligence" class="mobile-menu-link">AI / CI</a>
+  <a href="#philosophy" class="mobile-menu-link">Philosophy</a>
   <a href="#pricing" class="mobile-menu-link">Pricing</a>
-  <a href="#faq" class="mobile-menu-link">FAQ</a>
-  <button class="btn-glass" style="width:100%; margin-top:10px;">+91 8853 355 153</button>
-  <button class="btn-green" style="width:100%; margin-top:8px;">Get a Quote</button>
+  <a href="#contact" class="mobile-menu-link">Contact</a>
+  <div class="mobile-theme-switcher">
+    <div class="mobile-theme-label">Theme</div>
+    <div class="mobile-theme-options">
+      <button class="mobile-theme-opt active" data-theme="greenpixel" title="GreenPixel"><span style="background:#3dff7a;"></span></button>
+      <button class="mobile-theme-opt" data-theme="glassmorphism" title="Glassmorphism"><span style="background:linear-gradient(135deg,#60a5fa,#a78bfa);"></span></button>
+      <button class="mobile-theme-opt" data-theme="neumorphism" title="Neumorphism"><span style="background:#e0e5ec;"></span></button>
+      <button class="mobile-theme-opt" data-theme="luxury" title="Luxury"><span style="background:linear-gradient(135deg,#d4a853,#f5e6a3);"></span></button>
+      <button class="mobile-theme-opt" data-theme="retro" title="Retro"><span style="background:#c0c0c0;"></span></button>
+      <button class="mobile-theme-opt" data-theme="brutalist" title="Brutalist"><span style="background:#fff;"></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu-phone">+91 8853 355 153</div>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <video class="hero-video" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" webkit-playsinline="webkit-playsinline" preload="auto" aria-hidden="true">
+  <video class="hero-video" autoplay muted loop playsinline>
     <source src="videos/adver hero bg.mp4" type="video/mp4">
   </video>
-  <div class="hero-video-overlay" aria-hidden="true"></div>
-  <div class="hero-glow"></div>
-  <div class="eq-bar-group" id="heroEq"></div>
-
-  <div class="hero-badge reveal"><span class="dot"></span> Welcome to adver.software </div>
-  <h1 class="reveal rd1">We'll Build Your<br><span class="accent">Dream</span> <span class="block" id="typewriter" data-words="🌐website,🖼️graphics,📜flyers,✨logo"> website</span></h1>
-  <p class="hero-sub reveal rd2">From stunning websites to next-gen graphic design — flyers, packaging, billboards, carry-bags, and everything your brand needs.</p>
-
-  <div class="hero-chips reveal rd2">
-    <span class="chip">🌐 Website Design</span>
-    <span class="chip">🖼 Graphic Design</span>
-    <span class="chip">📦 Packaging</span>
-    <span class="chip">🧠 Comp. Intelligence</span>
-    <span class="chip">✨ New Age Graphics</span>
-    <span class="chip">📋 Flyers &amp; Billboards</span>
+  <div class="hero-video-overlay"></div>
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-label">adver.software</div>
+    <h1 class="hero-title">
+      <span class="word">Designing</span><br>
+      <span class="word accent-line">forward.</span>
+    </h1>
+    <p class="hero-sub">Websites, brands, and intelligent systems — engineered for what comes next.</p>
+    <a href="#contact" class="hero-cta"><span>Start a Project →</span></a>
   </div>
-
-  <button class="btn-cta reveal rd3">Start Your Project →</button>
-
-  <div class="hero-card glass-card reveal rd4">
-    <div class="browser-bar">
-      <div class="browser-dots">
-        <div class="browser-dot" style="background:#ff5f56"></div>
-        <div class="browser-dot" style="background:#ffbd2e"></div>
-        <div class="browser-dot" style="background:#27c93f"></div>
-      </div>
-      <div class="browser-url">www.adver.software</div>
-    </div>
-    <div class="browser-preview">
-      <div style="grid-row:span 2;padding:18px;background:rgba(61,255,122,.06);border:1px solid rgba(61,255,122,.15);border-radius:10px;">
-        <div style="height:10px;background:var(--green);opacity:.6;width:55%;border-radius:5px;margin-bottom:8px;"></div>
-        <div style="height:6px;background:rgba(255,255,255,.12);border-radius:3px;margin-bottom:5px;"></div>
-        <div style="height:6px;background:rgba(255,255,255,.08);border-radius:3px;width:80%;margin-bottom:14px;"></div>
-        <div style="height:58px;background:linear-gradient(135deg,rgba(61,255,122,.15),rgba(61,255,122,.04));border-radius:8px;"></div>
-      </div>
-      <div style="padding:14px;background:rgba(61,255,122,.05);border:1px solid rgba(61,255,122,.12);border-radius:10px;">
-        <div style="height:7px;background:var(--green);opacity:.4;width:60%;border-radius:3px;margin-bottom:6px;"></div>
-        <div style="height:5px;background:rgba(255,255,255,.1);border-radius:2px;"></div>
-      </div>
-      <div style="padding:14px;background:rgba(61,255,122,.03);border:1px solid rgba(61,255,122,.1);border-radius:10px;">
-        <div style="height:5px;background:rgba(255,255,255,.1);border-radius:2px;margin-bottom:5px;"></div>
-        <div style="height:7px;background:rgba(61,255,122,.3);width:45%;border-radius:3px;"></div>
-      </div>
-      <div style="grid-column:span 2;padding:12px;background:rgba(61,255,122,.03);border:1px solid rgba(61,255,122,.1);border-radius:10px;display:flex;align-items:center;gap:8px;">
-        <div style="flex:1;height:8px;background:rgba(61,255,122,.4);border-radius:4px;"></div>
-        <div style="flex:2;height:8px;background:rgba(255,255,255,.08);border-radius:4px;"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="flag-badges reveal rd4" style="margin-top:22px;">
-    <div class="flag-badge">🇮🇳 India</div>
-    <div class="flag-badge">🇺🇸 USA</div>
-    <div class="flag-badge">🇲🇾 Malaysia</div>
+  <div class="scroll-indicator" style="opacity:0;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-inner">
-    <span class="ticker-item">Website Design</span><span class="ticker-item">Graphic Design</span><span class="ticker-item">Flyers &amp; Banners</span><span class="ticker-item">Packaging Design</span><span class="ticker-item">Billboard Design</span><span class="ticker-item">Carry-Bag Branding</span><span class="ticker-item">Computational Intelligence</span><span class="ticker-item">New Age Graphics</span><span class="ticker-item">UI / UX Design</span><span class="ticker-item">Brand Identity</span>
-    <span class="ticker-item">Website Design</span><span class="ticker-item">Graphic Design</span><span class="ticker-item">Flyers &amp; Banners</span><span class="ticker-item">Packaging Design</span><span class="ticker-item">Billboard Design</span><span class="ticker-item">Carry-Bag Branding</span><span class="ticker-item">Computational Intelligence</span><span class="ticker-item">New Age Graphics</span><span class="ticker-item">UI / UX Design</span><span class="ticker-item">Brand Identity</span>
-  </div>
-</div>
+<!-- SCROLL STORY — "Why Your Website Matters" -->
+<section class="story" id="story">
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <div class="center">
-      <div class="section-tag reveal">What We Do</div>
-      <h2 class="section-title reveal rd1">Everything Your Brand<br><span class="accent">Needs to Shine</span></h2>
-      <p class="section-sub reveal rd2">Bold, functional design built to convert — from a ₹5K starter site to complex enterprise builds.</p>
+  <!-- 1. Opening Hook -->
+  <div class="story-block story-block--hook">
+    <div class="story-line story-line--center story-line--display" data-story>
+      People judge your business<br>before they ever talk to you.
     </div>
+  </div>
+
+  <!-- 2. Story Buildup -->
+  <div class="story-block">
+    <div class="story-line story-line--left" data-story>
+      A potential customer hears about your business.
+    </div>
+    <div class="story-line story-line--right" data-story>
+      The first thing they do?
+    </div>
+    <div class="story-line story-line--center story-line--emphasis" data-story>
+      They search your name.
+    </div>
+    <div class="story-line story-line--center" data-story>
+      They open your website.
+    </div>
+  </div>
+
+  <!-- 3. Decision Moment -->
+  <div class="story-block">
+    <div class="story-line story-line--center story-line--emphasis" data-story>
+      And in 5 seconds, they decide:
+    </div>
+    <div class="story-questions">
+      <div class="story-line story-line--center story-line--question" data-story>
+        "Is this business professional?"
+      </div>
+      <div class="story-line story-line--center story-line--question" data-story>
+        "Can I trust them?"
+      </div>
+      <div class="story-line story-line--center story-line--question" data-story>
+        "Do they look successful?"
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Negative Realization -->
+  <div class="story-block">
+    <div class="story-line story-line--center" data-story>
+      If your website feels outdated, slow, or confusing...
+    </div>
+    <div class="story-line story-line--center story-line--emphasis" data-story>
+      You don't just lose a visitor.
+    </div>
+    <div class="story-line story-line--center story-line--heavy" data-story>
+      You lose credibility.
+    </div>
+  </div>
+
+  <!-- 5. Core Message -->
+  <div class="story-block">
+    <div class="story-line story-line--center" data-story>
+      Your website is not just a page.
+    </div>
+    <div class="story-line story-line--center" data-story>
+      It's your digital reputation.
+    </div>
+    <div class="story-line story-line--center" data-story>
+      It's your first impression.
+    </div>
+    <div class="story-line story-line--center" data-story>
+      It's your silent salesman.
+    </div>
+    <div class="story-line story-line--center story-line--emphasis" data-story>
+      And whether you like it or not —
+    </div>
+    <div class="story-line story-line--center story-line--heavy" data-story>
+      People are judging your business by it.
+    </div>
+  </div>
+
+  <!-- 6. Transition -->
+  <div class="story-block">
+    <div class="story-line story-line--center story-line--accent" data-story>
+      That's where we come in.
+    </div>
+  </div>
+
+  <!-- 7. Solution -->
+  <div class="story-block">
+    <div class="story-line story-line--center" data-story>
+      At Adver Software, we don't just design websites.
+    </div>
+    <div class="story-line story-line--left story-line--solution" data-story>
+      We build trust.
+    </div>
+    <div class="story-line story-line--right story-line--solution" data-story>
+      We position your business as premium.
+    </div>
+    <div class="story-line story-line--center story-line--solution" data-story>
+      We turn visitors into customers.
+    </div>
+  </div>
+
+  <!-- 8. Signature -->
+  <div class="story-block story-block--signature">
+    <div class="story-line story-line--center story-line--signature" data-story>
+      <span class="sig-glow"></span>
+      Good design = Customer trust = Good business.
+    </div>
+  </div>
+
+</section>
+
+<!-- 001 — SERVICES -->
+<section class="section section--alt" id="services">
+  <div class="container">
+    <div class="section-label">001 — SERVICES</div>
+    <h2 class="section-heading">What We Engineer</h2>
+
     <div class="services-grid">
-      <div class="svc-card glass-card reveal rd1">
-        <div class="svc-icon">🌐</div>
+      <!-- 1: Web Design (large — spans 2 cols) -->
+      <div class="svc-card glass-panel">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48">
+            <rect x="4" y="8" width="40" height="28" rx="3" />
+            <line x1="4" y1="30" x2="44" y2="30" />
+            <line x1="24" y1="36" x2="24" y2="44" />
+            <line x1="16" y1="44" x2="32" y2="44" />
+            <line x1="15" y1="14" x2="25" y2="14" />
+            <rect x="15" y="18" width="18" height="8" rx="1" opacity="0.3"/>
+          </svg>
+        </div>
         <h3>Website Design &amp; Dev</h3>
-        <p>Responsive, fast, and visually striking websites tailored to your brand. From landing pages to full e-commerce — starting at just ₹5,000.</p>
-        <span class="svc-tag">Starting ₹5,000*</span>
-        <div class="card-eq"><span style="--d:.9s;height:18px"></span><span style="--d:1.1s;height:26px"></span><span style="--d:.7s;height:14px"></span><span style="--d:1.3s;height:28px"></span><span style="--d:.8s;height:20px"></span><span style="--d:1.0s;height:22px"></span></div>
+        <p>Responsive, fast, and visually striking websites tailored to your brand. From landing pages to full e-commerce.</p>
+        <span class="svc-tag">Starting ₹5,000</span>
       </div>
-      <div class="svc-card glass-card reveal rd2">
-        <div class="svc-icon">🖼</div>
+
+      <!-- 2: Graphic Design -->
+      <div class="svc-card glass-panel">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48">
+            <rect x="8" y="8" width="20" height="20" rx="2" transform="rotate(10 18 18)" />
+            <circle cx="32" cy="30" r="10" />
+            <polygon points="14,38 20,26 26,38" opacity="0.5"/>
+          </svg>
+        </div>
         <h3>Graphic Design</h3>
-        <p>Flyers, packaging, billboards, carry-bags, brand identities — premium visual output crafted with new-age aesthetics and pixel-perfect precision.</p>
+        <p>Flyers, packaging, billboards, brand identities — precision visual output.</p>
         <span class="svc-tag">Print + Digital</span>
-        <div class="card-eq"><span style="--d:1.1s;height:22px"></span><span style="--d:.8s;height:16px"></span><span style="--d:1.4s;height:30px"></span><span style="--d:.9s;height:18px"></span><span style="--d:1.2s;height:24px"></span><span style="--d:.7s;height:12px"></span></div>
       </div>
-      <div class="svc-card glass-card reveal rd3">
-        <div class="svc-icon">🧠</div>
-        <h3>Computational Intelligence</h3>
-        <p>Actively building AI-powered solutions — smart automation, intelligent data processing, and next-gen CI tools for forward-thinking clients.</p>
-        <span class="svc-tag">In Development</span>
-        <div class="card-eq"><span style="--d:.6s;height:20px"></span><span style="--d:1.0s;height:28px"></span><span style="--d:1.3s;height:14px"></span><span style="--d:.8s;height:26px"></span><span style="--d:1.1s;height:18px"></span><span style="--d:.9s;height:30px"></span></div>
+
+      <!-- 3: UI/UX -->
+      <div class="svc-card glass-panel">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48">
+            <rect x="6" y="10" width="28" height="20" rx="2" />
+            <rect x="14" y="18" width="28" height="20" rx="2" />
+            <circle cx="28" cy="28" r="2" fill="none"/>
+            <line x1="28" y1="22" x2="28" y2="24" />
+          </svg>
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>Interfaces that feel intuitive. User research, wireframes, and prototypes.</p>
+        <span class="svc-tag">End-to-End</span>
       </div>
-      <div class="svc-card glass-card reveal rd1">
-        <div class="svc-icon">✨</div>
-        <h3>New Age Graphics</h3>
-        <p>Liquid glass, multi-layered gradients, holographic aesthetics and immersive visual effects — design that feels like the future.</p>
-        <span class="svc-tag">Signature Style</span>
-      </div>
-      <div class="svc-card glass-card reveal rd2">
-        <div class="svc-icon">📦</div>
+
+      <!-- 4: Packaging -->
+      <div class="svc-card glass-panel">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48">
+            <path d="M8 16L24 8L40 16L40 36L24 44L8 36Z" />
+            <line x1="24" y1="8" x2="24" y2="44" />
+            <line x1="8" y1="16" x2="40" y2="36" opacity="0.3"/>
+            <line x1="40" y1="16" x2="8" y2="36" opacity="0.3"/>
+          </svg>
+        </div>
         <h3>Packaging &amp; Print</h3>
-        <p>Stand-out packaging that sells. Carry-bag designs, box wraps, label design and full print-ready artwork delivered fast.</p>
+        <p>Stand-out packaging that sells. Box wraps, labels, and print-ready artwork.</p>
         <span class="svc-tag">Print-Ready Files</span>
       </div>
-      <div class="svc-card glass-card reveal rd3">
-        <div class="svc-icon">🎯</div>
-        <h3>Challenging Projects</h3>
-        <p>We've tackled complex, ambitious briefs that others turned down. Bring us your hardest problem — we love a challenge.</p>
-        <span class="svc-tag">No Brief Too Big</span>
-      </div>
-    </div>
-  </div>
-</section>
 
-<div class="glow-div"></div>
-
-<!-- PROJECTS -->
-<section id="projects" style="background:var(--bg2);">
-  <div class="container">
-    <div class="center">
-      <div class="section-tag reveal">Our Work</div>
-      <h2 class="section-title reveal rd1">Projects That <span class="accent">Push Boundaries</span></h2>
-      <p class="section-sub reveal rd2">From demanding client briefs to pioneering new visual styles — here's a taste of what we've built.</p>
-    </div>
-    <div class="proj-grid">
-      <div class="proj-card reveal rd1">
-        <div class="proj-thumb" style="background:linear-gradient(135deg,#070e09,#0e1f10);">
-          <div style="position:relative;z-index:2;width:80%;padding:14px;background:rgba(6,9,8,.8);border:1px solid rgba(61,255,122,.2);border-radius:8px;">
-            <div style="height:8px;background:var(--green);opacity:.7;width:55%;border-radius:4px;margin-bottom:7px;"></div>
-            <div style="height:5px;background:rgba(255,255,255,.12);border-radius:2px;margin-bottom:5px;"></div>
-            <div style="height:5px;background:rgba(255,255,255,.07);border-radius:2px;width:80%;margin-bottom:10px;"></div>
-            <div style="display:flex;gap:6px;"><div style="flex:1;height:28px;background:rgba(61,255,122,.15);border-radius:5px;"></div><div style="flex:1;height:28px;background:rgba(61,255,122,.08);border-radius:5px;"></div></div>
-          </div>
-          <div class="proj-label">Website</div>
-        </div>
-        <div class="proj-body">
-          <h4>E-Commerce Storefront</h4>
-          <p>Full-featured online store with mobile-first design, fast checkout, and brand-consistent UI.</p>
-          <div class="proj-tags"><span class="proj-tag">Web Design</span><span class="proj-tag">E-Commerce</span><span class="proj-tag">UI/UX</span></div>
-        </div>
-      </div>
-      <div class="proj-card reveal rd2">
-        <div class="proj-thumb" style="background:linear-gradient(135deg,#0a1209,#050c07);">
-          <div style="position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:8px;width:76%;">
-            <div style="height:52px;background:linear-gradient(135deg,rgba(61,255,122,.2),rgba(61,255,122,.05));border:1px solid rgba(61,255,122,.2);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:20px;">📦</div>
-            <div style="height:52px;background:linear-gradient(135deg,rgba(61,255,122,.1),rgba(0,0,0,.3));border:1px solid rgba(61,255,122,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:20px;">🛍</div>
-            <div style="height:52px;background:rgba(61,255,122,.06);border:1px solid rgba(61,255,122,.12);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:20px;">🏷</div>
-            <div style="height:52px;background:rgba(61,255,122,.08);border:1px solid rgba(61,255,122,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:20px;">📋</div>
-          </div>
-          <div class="proj-label">Packaging</div>
-        </div>
-        <div class="proj-body">
-          <h4>Product Packaging Suite</h4>
-          <p>Complete packaging identity — box designs, carry-bags, labels and print-ready artwork for an FMCG brand.</p>
-          <div class="proj-tags"><span class="proj-tag">Packaging</span><span class="proj-tag">Print</span><span class="proj-tag">Brand</span></div>
-        </div>
-      </div>
-      <div class="proj-card reveal rd3">
-        <div class="proj-thumb" style="background:linear-gradient(135deg,#040908,#0c180e);">
-          <svg width="200" height="110" viewBox="0 0 200 110" style="position:relative;z-index:2;">
-            <line x1="30" y1="25" x2="100" y2="55" stroke="rgba(61,255,122,.3)" stroke-width="1"/><line x1="30" y1="55" x2="100" y2="55" stroke="rgba(61,255,122,.2)" stroke-width="1"/><line x1="30" y1="85" x2="100" y2="55" stroke="rgba(61,255,122,.25)" stroke-width="1"/>
-            <line x1="100" y1="55" x2="170" y2="35" stroke="rgba(61,255,122,.35)" stroke-width="1.5"/><line x1="100" y1="55" x2="170" y2="75" stroke="rgba(61,255,122,.25)" stroke-width="1"/>
-            <circle cx="30" cy="25" r="7" fill="rgba(61,255,122,.15)" stroke="#3dff7a" stroke-width="1.5"/>
-            <circle cx="30" cy="55" r="7" fill="rgba(61,255,122,.15)" stroke="#3dff7a" stroke-width="1.5"/>
-            <circle cx="30" cy="85" r="7" fill="rgba(61,255,122,.1)" stroke="rgba(61,255,122,.7)" stroke-width="1"/>
-            <circle cx="100" cy="55" r="11" fill="rgba(61,255,122,.25)" stroke="#3dff7a" stroke-width="2"><animate attributeName="r" values="11;14;11" dur="1.8s" repeatCount="indefinite"/></circle>
-            <circle cx="170" cy="35" r="8" fill="rgba(61,255,122,.15)" stroke="#3dff7a" stroke-width="1.5"/>
-            <circle cx="170" cy="75" r="8" fill="rgba(61,255,122,.2)" stroke="#3dff7a" stroke-width="2"><animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite"/></circle>
+      <!-- 5: Computational Intelligence (large — spans 2 cols) -->
+      <div class="svc-card glass-panel">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="14" r="4" />
+            <circle cx="12" cy="30" r="4" />
+            <circle cx="36" cy="30" r="4" />
+            <circle cx="24" cy="40" r="3" />
+            <line x1="24" y1="18" x2="12" y2="26" />
+            <line x1="24" y1="18" x2="36" y2="26" />
+            <line x1="12" y1="34" x2="24" y2="37" />
+            <line x1="36" y1="34" x2="24" y2="37" />
+            <line x1="12" y1="30" x2="36" y2="30" opacity="0.3"/>
           </svg>
-          <div class="proj-label">AI / CI</div>
         </div>
-        <div class="proj-body">
-          <h4>Computational Intelligence Tool</h4>
-          <p>Custom AI-assisted processing pipeline built for a challenging client with real-time inference.</p>
-          <div class="proj-tags"><span class="proj-tag">AI / CI</span><span class="proj-tag">Automation</span><span class="proj-tag">Custom Dev</span></div>
+        <h3>Computational Intelligence</h3>
+        <p>AI-powered solutions — smart automation, intelligent data processing, and next-gen CI tools for forward-thinking clients.</p>
+        <span class="svc-tag">In Development</span>
+      </div>
+
+      <!-- 6: New Age Graphics -->
+      <div class="svc-card glass-panel">
+        <div class="svc-icon">
+          <svg viewBox="0 0 48 48">
+            <polygon points="24,6 34,24 24,20 14,24" />
+            <line x1="34" y1="24" x2="44" y2="18" opacity="0.6"/>
+            <line x1="34" y1="24" x2="44" y2="24" opacity="0.4"/>
+            <line x1="34" y1="24" x2="44" y2="30" opacity="0.6"/>
+            <line x1="34" y1="24" x2="42" y2="36" opacity="0.3"/>
+            <circle cx="18" cy="36" r="8" opacity="0.3"/>
+          </svg>
         </div>
+        <h3>New Age Graphics</h3>
+        <p>Liquid glass, holographic aesthetics, and immersive visual effects.</p>
+        <span class="svc-tag">Signature Style</span>
       </div>
     </div>
   </div>
 </section>
 
-<div class="glow-div"></div>
-
-<!-- CI SECTION -->
-<section id="intelligence" style="background:linear-gradient(135deg,#060908 0%,#0a110c 50%,#060908 100%);">
+<!-- 002 — PROJECTS -->
+<section class="section" id="projects">
   <div class="container">
-    <div class="section-tag reveal">Emerging Tech</div>
-    <h2 class="section-title reveal rd1">Computational<br><span class="accent">Intelligence</span></h2>
-    <p class="section-sub reveal rd2">Actively developing AI-driven tools and intelligent systems — machine learning, automation, and smart decision-making for real-world applications.</p>
-    <div class="ci-grid">
-      <div class="ci-visual reveal rd1">
-        <div class="ci-visual-inner">
-          <svg width="300" height="300" viewBox="0 0 300 300">
-            <line x1="60" y1="60" x2="150" y2="90" stroke="rgba(61,255,122,.2)" stroke-width="1"/>
-            <line x1="60" y1="120" x2="150" y2="90" stroke="rgba(61,255,122,.15)" stroke-width="1"/>
-            <line x1="60" y1="180" x2="150" y2="150" stroke="rgba(61,255,122,.2)" stroke-width="1"/>
-            <line x1="60" y1="240" x2="150" y2="210" stroke="rgba(61,255,122,.15)" stroke-width="1"/>
-            <line x1="150" y1="90" x2="240" y2="75" stroke="rgba(61,255,122,.25)" stroke-width="1.5"/>
-            <line x1="150" y1="90" x2="240" y2="150" stroke="rgba(61,255,122,.15)" stroke-width="1"/>
-            <line x1="150" y1="150" x2="240" y2="150" stroke="rgba(61,255,122,.3)" stroke-width="1.5"/>
-            <line x1="150" y1="150" x2="240" y2="225" stroke="rgba(61,255,122,.15)" stroke-width="1"/>
-            <line x1="150" y1="210" x2="240" y2="225" stroke="rgba(61,255,122,.2)" stroke-width="1"/>
-            <circle cx="60" cy="60" r="10" fill="rgba(61,255,122,.15)" stroke="#3dff7a" stroke-width="1.5"/>
-            <circle cx="60" cy="120" r="10" fill="rgba(61,255,122,.15)" stroke="#3dff7a" stroke-width="1.5"/>
-            <circle cx="60" cy="180" r="10" fill="rgba(61,255,122,.1)" stroke="rgba(61,255,122,.7)" stroke-width="1"/>
-            <circle cx="60" cy="240" r="10" fill="rgba(61,255,122,.08)" stroke="rgba(61,255,122,.5)" stroke-width="1"/>
-            <circle cx="150" cy="90" r="13" fill="rgba(61,255,122,.2)" stroke="#3dff7a" stroke-width="2"><animate attributeName="r" values="13;15;13" dur="2s" repeatCount="indefinite"/></circle>
-            <circle cx="150" cy="150" r="13" fill="rgba(61,255,122,.25)" stroke="#3dff7a" stroke-width="2"><animate attributeName="r" values="13;16;13" dur="1.6s" repeatCount="indefinite"/></circle>
-            <circle cx="150" cy="210" r="13" fill="rgba(61,255,122,.18)" stroke="#3dff7a" stroke-width="1.5"/>
-            <circle cx="240" cy="75" r="11" fill="rgba(61,255,122,.15)" stroke="#3dff7a" stroke-width="1.5"/>
-            <circle cx="240" cy="150" r="15" fill="rgba(61,255,122,.3)" stroke="#3dff7a" stroke-width="2.5"><animate attributeName="r" values="15;17;15" dur="1.8s" repeatCount="indefinite"/></circle>
-            <circle cx="240" cy="225" r="11" fill="rgba(61,255,122,.12)" stroke="rgba(61,255,122,.6)" stroke-width="1.5"/>
-            <text x="28" y="198" fill="rgba(61,255,122,.5)" font-size="9" font-family="monospace">INPUT</text>
-            <text x="128" y="238" fill="rgba(61,255,122,.5)" font-size="9" font-family="monospace">HIDDEN</text>
-            <text x="216" y="255" fill="rgba(61,255,122,.5)" font-size="9" font-family="monospace">OUTPUT</text>
-          </svg>
-          <div style="position:absolute;bottom:14px;left:0;right:0;display:flex;align-items:flex-end;gap:3px;height:22px;padding:0 14px;opacity:.28;">
-            <div style="flex:1;height:12px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce .9s ease-in-out infinite alternate;"></div>
-            <div style="flex:1;height:18px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce 1.1s ease-in-out infinite alternate;"></div>
-            <div style="flex:1;height:8px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce .7s ease-in-out infinite alternate;"></div>
-            <div style="flex:1;height:20px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce 1.3s ease-in-out infinite alternate;"></div>
-            <div style="flex:1;height:14px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce 1.0s ease-in-out infinite alternate;"></div>
-            <div style="flex:1;height:22px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce .8s ease-in-out infinite alternate;"></div>
+    <div class="section-label">002 — PROJECTS</div>
+    <h2 class="section-heading">Selected Work</h2>
+
+    <!-- Project 1 — Image Left -->
+    <div class="project-block project-block--left">
+      <div class="project-visual" data-cursor="view">
+        <div class="project-visual-gradient"></div>
+        <span class="project-visual-label">PROJECT VISUAL</span>
+      </div>
+      <div class="project-info">
+        <div class="project-num">01</div>
+        <h3 class="project-title">E-Commerce Storefront</h3>
+        <p class="project-desc">Full-featured online store with mobile-first design, fast checkout, and brand-consistent UI.</p>
+        <div class="project-tags">
+          <span class="project-tag">Web Design</span>
+          <span class="project-tag">E-Commerce</span>
+          <span class="project-tag">UI/UX</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 — Image Right -->
+    <div class="project-block project-block--right">
+      <div class="project-info">
+        <div class="project-num">02</div>
+        <h3 class="project-title">Product Packaging Suite</h3>
+        <p class="project-desc">Complete packaging identity — box designs, carry-bags, labels and print-ready artwork for an FMCG brand.</p>
+        <div class="project-tags">
+          <span class="project-tag">Packaging</span>
+          <span class="project-tag">Print</span>
+          <span class="project-tag">Brand Identity</span>
+        </div>
+      </div>
+      <div class="project-visual" data-cursor="view">
+        <div class="project-visual-gradient"></div>
+        <span class="project-visual-label">PROJECT VISUAL</span>
+      </div>
+    </div>
+
+    <!-- Project 3 — Full Width -->
+    <div class="project-block project-block--full">
+      <div class="project-visual" data-cursor="view">
+        <div class="project-visual-gradient"></div>
+        <span class="project-visual-label">PROJECT VISUAL</span>
+        <div class="project-overlay">
+          <div class="project-info">
+            <div class="project-num">03</div>
+            <h3 class="project-title">Computational Intelligence Tool</h3>
+            <p class="project-desc">An AI-powered automation platform built from scratch — now central to the client's operations.</p>
+            <div class="project-tags">
+              <span class="project-tag">AI/CI</span>
+              <span class="project-tag">Automation</span>
+              <span class="project-tag">Custom Dev</span>
+            </div>
           </div>
         </div>
       </div>
-      <div class="reveal rd2">
-        <p style="color:var(--muted);font-size:14.5px;line-height:1.75;margin-bottom:24px;">We're investing in <strong style="color:var(--white);">Computational Intelligence</strong> — the intersection of machine learning, data-driven logic, and intelligent automation. Our growing CI division is building tools that think, adapt, and scale with your business.</p>
-        <div class="ci-stats">
-          <div class="ci-stat glass-card"><div class="ci-stat-icon">⚡</div><div><div class="ci-stat-label">Smart Automation</div><div class="ci-stat-val">Active Development</div></div></div>
-          <div class="ci-stat glass-card"><div class="ci-stat-icon">🔬</div><div><div class="ci-stat-label">ML-Powered Tools</div><div class="ci-stat-val">In Pipeline</div></div></div>
-          <div class="ci-stat glass-card"><div class="ci-stat-icon">🌐</div><div><div class="ci-stat-label">Global Client Base</div><div class="ci-stat-val">India · USA · Malaysia</div></div></div>
-          <div class="ci-stat glass-card"><div class="ci-stat-icon">🏆</div><div><div class="ci-stat-label">Challenging Projects</div><div class="ci-stat-val">Successfully Delivered</div></div></div>
+    </div>
+
+    <!-- Project 4 — Image Left -->
+    <div class="project-block project-block--left">
+      <div class="project-visual" data-cursor="view">
+        <div class="project-visual-gradient"></div>
+        <span class="project-visual-label">PROJECT VISUAL</span>
+      </div>
+      <div class="project-info">
+        <div class="project-num">04</div>
+        <h3 class="project-title">Brand Identity System</h3>
+        <p class="project-desc">End-to-end visual identity — logo, typography, color system, and brand guidelines for a new venture.</p>
+        <div class="project-tags">
+          <span class="project-tag">Graphic Design</span>
+          <span class="project-tag">New Age Graphics</span>
+          <span class="project-tag">Brand</span>
         </div>
+      </div>
+    </div>
+
+    <p class="projects-note">Detailed case studies in development — launching soon.</p>
+  </div>
+</section>
+
+<!-- 003 — PHILOSOPHY -->
+<section class="section section--alt2" id="philosophy">
+  <div class="container" style="position:relative;">
+    <!-- Background shape -->
+    <svg class="philosophy-bg-shape" viewBox="0 0 200 200" fill="none" stroke="rgba(167,139,250,0.3)" stroke-width="0.5">
+      <polygon points="100,10 190,60 190,140 100,190 10,140 10,60"/>
+      <polygon points="100,30 170,70 170,130 100,170 30,130 30,70"/>
+      <polygon points="100,50 150,80 150,120 100,150 50,120 50,80"/>
+    </svg>
+
+    <div class="philosophy-grid">
+      <div class="philosophy-statement" data-text="We don't follow design trends. We set them.">
+        We don't follow<br>design trends.<br><br><span class="gradient-text">We set them.</span>
+      </div>
+      <div class="philosophy-text">
+        <p>adver.software exists at the intersection of design, technology, and forward-thinking craft. We build websites, brands, and intelligent systems for clients who refuse to look ordinary.</p>
+        <p>Based in India with clients across three countries, we bring experimental aesthetics and technical precision to every project — from a ₹5,000 starter site to complex enterprise builds.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="glow-div"></div>
-
-<!-- PRICING -->
-<section id="pricing">
+<!-- STATS BAR -->
+<section class="section">
   <div class="container">
-    <div class="center">
-      <div class="section-tag reveal">Transparent Pricing</div>
-      <h2 class="section-title reveal rd1">One <span class="schip">💰 Price</span><br>Full Delivery</h2>
-      <p class="section-sub reveal rd2">No hidden costs. Honest pricing — from starter sites to full brand overhauls.</p>
+    <div class="stats-bar glass-panel">
+      <div class="stat-item">
+        <div class="stat-number" data-value="3">0<span class="stat-suffix"></span></div>
+        <div class="stat-label">Countries Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-value="50">0<span class="stat-suffix">+</span></div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-value="100">0<span class="stat-suffix">%</span></div>
+        <div class="stat-label">On-Time Delivery</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-value="5">0<span class="stat-suffix">★</span></div>
+        <div class="stat-label">Client Rating</div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- 004 — TESTIMONIALS -->
+<section class="section section--alt" id="testimonials">
+  <div class="container">
+    <div class="section-label">004 — SIGNALS</div>
+    <h2 class="section-heading">Client Signals</h2>
+
+    <div class="testimonials-wrap">
+      <div class="testimonials-track">
+        <!-- Original 3 cards -->
+        <div class="t-card glass-panel">
+          <div class="t-quote-mark">"</div>
+          <div class="t-stars">
+            <span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span>
+          </div>
+          <p class="t-quote">adver.software delivered our e-commerce website in record time. The design was beyond what we imagined — liquid glass elements, pixel-perfect on every screen.</p>
+          <div class="t-author">
+            <div class="t-avatar"></div>
+            <div>
+              <div class="t-name">Rajesh Kumar</div>
+              <div class="t-role">Founder, RetailHub India</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card glass-panel">
+          <div class="t-quote-mark">"</div>
+          <div class="t-stars">
+            <span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span>
+          </div>
+          <p class="t-quote">The packaging designs they created for our product line were stunning — exactly the new-age aesthetic we needed. Professional, fast, and great value.</p>
+          <div class="t-author">
+            <div class="t-avatar"></div>
+            <div>
+              <div class="t-name">Sarah Mitchell</div>
+              <div class="t-role">Brand Manager, USA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card glass-panel">
+          <div class="t-quote-mark">"</div>
+          <div class="t-stars">
+            <span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span>
+          </div>
+          <p class="t-quote">We brought them a challenging brief two other agencies refused. They delivered a complete CI-powered tool that's now central to our operations.</p>
+          <div class="t-author">
+            <div class="t-avatar"></div>
+            <div>
+              <div class="t-name">Ahmad Zulkifli</div>
+              <div class="t-role">Tech Lead, Malaysia</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicated for seamless loop -->
+        <div class="t-card glass-panel" aria-hidden="true">
+          <div class="t-quote-mark">"</div>
+          <div class="t-stars">
+            <span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span>
+          </div>
+          <p class="t-quote">adver.software delivered our e-commerce website in record time. The design was beyond what we imagined — liquid glass elements, pixel-perfect on every screen.</p>
+          <div class="t-author">
+            <div class="t-avatar"></div>
+            <div>
+              <div class="t-name">Rajesh Kumar</div>
+              <div class="t-role">Founder, RetailHub India</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card glass-panel" aria-hidden="true">
+          <div class="t-quote-mark">"</div>
+          <div class="t-stars">
+            <span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span>
+          </div>
+          <p class="t-quote">The packaging designs they created for our product line were stunning — exactly the new-age aesthetic we needed. Professional, fast, and great value.</p>
+          <div class="t-author">
+            <div class="t-avatar"></div>
+            <div>
+              <div class="t-name">Sarah Mitchell</div>
+              <div class="t-role">Brand Manager, USA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card glass-panel" aria-hidden="true">
+          <div class="t-quote-mark">"</div>
+          <div class="t-stars">
+            <span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span>
+          </div>
+          <p class="t-quote">We brought them a challenging brief two other agencies refused. They delivered a complete CI-powered tool that's now central to our operations.</p>
+          <div class="t-author">
+            <div class="t-avatar"></div>
+            <div>
+              <div class="t-name">Ahmad Zulkifli</div>
+              <div class="t-role">Tech Lead, Malaysia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="t-note">Client photos and brand logos will be added with written permission.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 005 — PRICING -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-label">005 — INVESTMENT</div>
+    <h2 class="section-heading">Transparent Investment</h2>
+
     <div class="pricing-grid">
-      <div class="pc glass-card reveal rd1">
-        <div class="pc-tier">Starter</div>
-        <div class="pc-price"><sup>₹</sup>5,000<span class="unit">*</span></div>
-        <div class="pc-from">Starting price · final quote on scope</div>
-        <div class="pc-features-wrapper">
-          <ul class="pc-features pc-features-preview">
-            <li>Single-page responsive website</li>
-            <li>Clean, mobile-first design</li>
-            <li>Contact form integration</li>
-          </ul>
-          <div class="pc-features-full" style="display:none;">
-            <ul class="pc-features">
-              <li>Single-page responsive website</li>
-              <li>Clean, mobile-first design</li>
-              <li>Contact form integration</li>
-              <li>Basic SEO setup</li>
-              <li>1 revision round</li>
-            </ul>
+      <!-- Starter -->
+      <div class="pricing-card pricing-card--starter glass-panel">
+        <div class="pricing-tier">STARTER</div>
+        <div class="pricing-amount">₹<span data-count="5000">5,000</span><span style="font-size:var(--text-body);font-weight:400;color:var(--text-tertiary);">*</span></div>
+        <div class="pricing-sub">Starting price · scoped on brief</div>
+        <div class="pricing-features">
+          <div class="pricing-feature"><span class="pricing-check">✓</span> Responsive single-page website</div>
+          <div class="pricing-feature"><span class="pricing-check">✓</span> Mobile-optimized design</div>
+          <div class="pricing-feature"><span class="pricing-check">✓</span> Contact form integration</div>
+          <div class="pricing-feature"><span class="pricing-check">✓</span> 1 round of revisions</div>
+          <div class="pricing-details">
+            <div class="pricing-feature"><span class="pricing-check">✓</span> Basic SEO setup</div>
+            <div class="pricing-feature"><span class="pricing-check">✓</span> 7-day delivery</div>
           </div>
+          <button class="pricing-details-toggle">View Details →</button>
         </div>
-        <button class="pc-toggle" onclick="togglePricingFeatures(this)">View More →</button>
-        <button class="btn-glass" style="width:100%;padding:12px;margin-top:12px;">Get a Quote →</button>
+        <a href="#contact" class="pricing-btn">Get a Quote →</a>
       </div>
-      <div class="pc glass-card featured reveal rd2">
-        <div class="pc-tier">Pro</div>
-        <div class="pc-price"><sup>₹</sup>15,000<span class="unit">*</span></div>
-        <div class="pc-from">Most popular · full brand delivery</div>
-        <div class="pc-features-wrapper">
-          <ul class="pc-features pc-features-preview">
-            <li>Multi-page website (up to 6 pages)</li>
-            <li>New-age graphics &amp; liquid glass UI</li>
-            <li>Graphic design pack included</li>
-          </ul>
-          <div class="pc-features-full" style="display:none;">
-            <ul class="pc-features">
-              <li>Multi-page website (up to 6 pages)</li>
-              <li>New-age graphics &amp; liquid glass UI</li>
-              <li>Graphic design pack included</li>
-              <li>Flyer + social media kit</li>
-              <li>3 revision rounds</li>
-              <li>Priority delivery</li>
-            </ul>
+
+      <!-- Pro -->
+      <div class="pricing-card pricing-card--pro glass-panel">
+        <div class="pricing-border"></div>
+        <div class="pricing-badge">RECOMMENDED</div>
+        <div class="pricing-tier">PRO</div>
+        <div class="pricing-amount">₹<span data-count="15000">15,000</span><span style="font-size:var(--text-body);font-weight:400;color:var(--text-tertiary);">*</span></div>
+        <div class="pricing-sub">Starting price · scoped on brief</div>
+        <div class="pricing-features">
+          <div class="pricing-feature"><span class="pricing-check">✓</span> Multi-page website or e-commerce</div>
+          <div class="pricing-feature"><span class="pricing-check">✓</span> Custom UI/UX design</div>
+          <div class="pricing-feature"><span class="pricing-check">✓</span> CMS integration</div>
+          <div class="pricing-feature"><span class="pricing-check">✓</span> 3 rounds of revisions</div>
+          <div class="pricing-feature"><span class="pricing-check">✓</span> Performance optimization</div>
+          <div class="pricing-details">
+            <div class="pricing-feature"><span class="pricing-check">✓</span> Advanced SEO &amp; analytics</div>
+            <div class="pricing-feature"><span class="pricing-check">✓</span> 30-day post-launch support</div>
           </div>
+          <button class="pricing-details-toggle">View Details →</button>
         </div>
-        <button class="pc-toggle" onclick="togglePricingFeatures(this)">View More →</button>
-        <button class="btn-green" style="width:100%;padding:12px;font-size:13px;margin-top:12px;">Get a Quote →</button>
+        <a href="#contact" class="pricing-btn pricing-btn--accent">Get a Quote →</a>
       </div>
-      <div class="pc glass-card reveal rd3">
-        <div class="pc-tier">Enterprise</div>
-        <div class="pc-price" style="font-size:28px;">Custom</div>
-        <div class="pc-from">For complex &amp; challenging projects</div>
-        <div class="pc-features-wrapper">
-          <ul class="pc-features pc-features-preview">
-            <li>Full website + backend dev</li>
-            <li>Packaging &amp; billboard suite</li>
-            <li>CI/AI integration</li>
-          </ul>
-          <div class="pc-features-full" style="display:none;">
-            <ul class="pc-features">
-              <li>Full website + backend dev</li>
-              <li>Packaging &amp; billboard suite</li>
-              <li>CI/AI integration</li>
-              <li>Ongoing support &amp; maintenance</li>
-              <li>Unlimited revisions</li>
-              <li>Dedicated project manager</li>
-            </ul>
+
+      <!-- Enterprise -->
+      <div class="pricing-card pricing-card--enterprise glass-panel">
+        <div class="pricing-tier">ENTERPRISE</div>
+        <div class="pricing-amount">Custom</div>
+        <div class="pricing-sub">Scoped to your requirements</div>
+        <div class="pricing-features">
+          <div class="pricing-feature"><span class="pricing-check">✓</span> Full-scale web applications</div>
+          <div class="pricing-feature"><span class="pricing-check">✓</span> CI/AI integrations</div>
+          <div class="pricing-feature"><span class="pricing-check">✓</span> Brand identity system</div>
+          <div class="pricing-feature"><span class="pricing-check">✓</span> Dedicated project manager</div>
+          <div class="pricing-details">
+            <div class="pricing-feature"><span class="pricing-check">✓</span> Priority support &amp; SLA</div>
+            <div class="pricing-feature"><span class="pricing-check">✓</span> Ongoing retainer available</div>
           </div>
+          <button class="pricing-details-toggle">View Details →</button>
         </div>
-        <button class="pc-toggle" onclick="togglePricingFeatures(this)">View More →</button>
-        <button class="btn-glass" style="width:100%;padding:12px;margin-top:12px;">Contact Us →</button>
+        <a href="#contact" class="pricing-btn">Get a Quote →</a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="glow-div"></div>
-
-<!-- TESTIMONIALS -->
-<section style="background:var(--bg2);">
+<!-- 006 — FAQ -->
+<section class="section section--alt" id="faq">
   <div class="container">
-    <div class="center">
-      <div class="section-tag reveal">Client Stories</div>
-      <h2 class="section-title reveal rd1">What Clients <span class="accent">Say</span></h2>
-      <p class="section-sub reveal rd2">From first-time founders to established brands — we've delivered for them all.</p>
-    </div>
-    <div class="t-grid">
-      <div class="t-card glass-card reveal rd1">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-quote">"adver.software delivered our e-commerce website in record time. The design was beyond what we imagined — liquid glass elements, pixel-perfect on every screen."</p>
-        <div class="t-author"><div class="t-avatar">RK</div><div><div class="t-name">Rajesh Kumar</div><div class="t-role">Founder, RetailHub India</div></div></div>
-      </div>
-      <div class="t-card glass-card reveal rd2">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-quote">"The packaging designs they created for our product line were stunning — exactly the new-age aesthetic we needed. Professional, fast, and great value."</p>
-        <div class="t-author"><div class="t-avatar">SM</div><div><div class="t-name">Sarah Mitchell</div><div class="t-role">Brand Manager, USA</div></div></div>
-      </div>
-      <div class="t-card glass-card reveal rd3">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-quote">"We brought them a challenging brief two other agencies refused. They delivered a complete CI-powered tool that's now central to our operations."</p>
-        <div class="t-author"><div class="t-avatar">AZ</div><div><div class="t-name">Ahmad Zulkifli</div><div class="t-role">Tech Lead, Malaysia</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="section-label">006 — FAQ</div>
+    <h2 class="section-heading">Questions, answered.</h2>
 
-<div class="glow-div"></div>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="container">
-    <div class="center">
-      <div class="section-tag reveal">FAQ</div>
-      <h2 class="section-title reveal rd1">Questions? <span class="accent">Answered.</span></h2>
-    </div>
     <div class="faq-wrap">
-      <div class="faq-item glass-card open reveal rd1">
-        <button class="faq-q" onclick="toggleFaq(this)">What does the ₹5,000* website include?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">The ₹5,000 price is our starting point for a single-page responsive website with clean design and basic SEO. Final pricing depends on your requirements — multi-page sites, e-commerce features, or custom animations are quoted separately.</div></div>
+      <div class="faq-item glass-panel">
+        <button class="faq-q">
+          How long does a typical project take?
+          <div class="faq-icon"><span class="h-line"></span><span class="v-line"></span></div>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Starter sites ship in 5–7 days. Pro-tier projects take 2–4 weeks depending on scope. Enterprise timelines are scoped individually — we'll give you a realistic date, and we'll hit it.</div>
+        </div>
       </div>
-      <div class="faq-item glass-card reveal rd2">
-        <button class="faq-q" onclick="toggleFaq(this)">Do you work with clients outside India?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes! We serve clients in India, the USA, and Malaysia. We work remotely and are comfortable with clients across all time zones. International payments accepted.</div></div>
+
+      <div class="faq-item glass-panel">
+        <button class="faq-q">
+          What's included in the starting price?
+          <div class="faq-icon"><span class="h-line"></span><span class="v-line"></span></div>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Design, development, and deployment. The ₹5,000 starter covers a responsive single-page site. Additional pages, e-commerce, and custom features are quoted after understanding your brief.</div>
+        </div>
       </div>
-      <div class="faq-item glass-card reveal rd3">
-        <button class="faq-q" onclick="toggleFaq(this)">What is "new age graphics" exactly?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">It's our signature aesthetic — liquid glass UI elements, multi-layered gradients, holographic effects, pixel-equalizer patterns, and immersive depth. We stay ahead of design trends and apply them practically to brand and web projects.</div></div>
+
+      <div class="faq-item glass-panel">
+        <button class="faq-q">
+          Do you work with international clients?
+          <div class="faq-icon"><span class="h-line"></span><span class="v-line"></span></div>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Yes. We serve clients in India, the USA, and Malaysia. Communication happens async or over calls — timezone is never a blocker.</div>
+        </div>
       </div>
-      <div class="faq-item glass-card reveal rd3">
-        <button class="faq-q" onclick="toggleFaq(this)">What kind of "challenging projects" have you handled?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">We've delivered complex custom web apps, full brand overhauls with tight deadlines, computational intelligence integrations, and unconventional design briefs that other studios passed on. We thrive on hard problems.</div></div>
+
+      <div class="faq-item glass-panel">
+        <button class="faq-q">
+          What technologies do you use?
+          <div class="faq-icon"><span class="h-line"></span><span class="v-line"></span></div>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Depends on the project. We're fluent in modern frontend stacks, CMS platforms, and custom backend solutions. We choose what's right for your use case — not what's trendy.</div>
+        </div>
       </div>
-      <div class="faq-item glass-card reveal rd4">
-        <button class="faq-q" onclick="toggleFaq(this)">How do I get started?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Call us at +91 8853 355 153, visit www.adver.software, or reach out via our contact form. We'll understand your needs, give you an honest quote, and get to work fast.</div></div>
+
+      <div class="faq-item glass-panel">
+        <button class="faq-q">
+          Can you handle complex or unusual projects?
+          <div class="faq-icon"><span class="h-line"></span><span class="v-line"></span></div>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">That's what we prefer. We've taken on briefs other agencies refused — from CI-powered tools to experimental visual design. Bring us the hard problems.</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section style="padding:72px 0;">
-  <div style="max-width:1080px;margin:0 auto;padding:0 36px;">
-    <div class="cta-card glass-card reveal">
-      <div style="display:flex;align-items:flex-end;gap:3px;height:28px;justify-content:center;margin-bottom:22px;opacity:.28;">
-        <div style="width:8px;height:14px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce .9s ease-in-out infinite alternate;"></div>
-        <div style="width:8px;height:22px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce 1.1s ease-in-out infinite alternate;"></div>
-        <div style="width:8px;height:10px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce .7s ease-in-out infinite alternate;"></div>
-        <div style="width:8px;height:28px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce 1.3s ease-in-out infinite alternate;"></div>
-        <div style="width:8px;height:18px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce 1.0s ease-in-out infinite alternate;"></div>
-        <div style="width:8px;height:24px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce .8s ease-in-out infinite alternate;"></div>
-        <div style="width:8px;height:12px;background:var(--green);border-radius:2px 2px 0 0;animation:eq-bounce 1.2s ease-in-out infinite alternate;"></div>
+<!-- 007 — CONTACT / CTA -->
+<section class="section cta-section" id="contact">
+  <div class="container">
+    <div class="section-label" style="text-align:center;">007 — CONTACT</div>
+    <h2 class="cta-headline">
+      Let's build<br>something that<br><span class="gradient-text">doesn't exist yet.</span>
+    </h2>
+    <p class="cta-sub">Have a project in mind? Let's talk.</p>
+    <div class="cta-buttons">
+      <a href="#contact-form" class="cta-btn-primary">Get a Quote →</a>
+      <a href="tel:+918853355153" class="cta-btn-secondary">Call +91 8853 355 153</a>
+    </div>
+
+    <div class="contact-form glass-panel" id="contact-form">
+      <div class="form-group">
+        <label class="form-label" for="name">Name</label>
+        <input type="text" id="name" class="form-input" placeholder="Your name">
       </div>
-      <h2>Ready to Build Your <span style="color:var(--green)">Dream Project?</span></h2>
-      <p>Websites, graphic design, packaging, new-age graphics, or a challenging custom build — we're ready. Starting at ₹5,000*.</p>
-      <div class="cta-btns">
-        <button class="btn-green" style="padding:14px 32px;font-size:13px;border-radius:10px;">Get a Free Quote →</button>
-        <div class="cta-contact">📞 +91 8853 355 153</div>
-        <div class="cta-contact">🌐 adver.software</div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input type="email" id="email" class="form-input" placeholder="you@company.com">
       </div>
+      <div class="form-group">
+        <label class="form-label" for="message">Message</label>
+        <textarea id="message" class="form-input" placeholder="Tell us about your project"></textarea>
+      </div>
+      <button type="button" class="form-submit">Send Message →</button>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
+<footer class="footer">
+  <div class="footer-grid">
     <div class="footer-brand">
-      <span class="footer-logo"><img src="images/ADVER 2.svg" alt="adver.software logo"> adver<span class="dot">.</span>software</span>
-      <div class="footer-eq">
-        <i style="--d:.9s;height:10px;"></i><i style="--d:1.1s;height:16px;"></i><i style="--d:.7s;height:8px;"></i><i style="--d:1.3s;height:20px;"></i><i style="--d:1.0s;height:12px;"></i><i style="--d:.8s;height:18px;"></i><i style="--d:1.2s;height:14px;"></i>
+      <img src="images/ADVER 2.svg" alt="adver.software">
+      <p>Designing forward.</p>
+      <div class="footer-flags">🇮🇳 🇺🇸 🇲🇾</div>
+    </div>
+
+    <div>
+      <div class="footer-heading">Services</div>
+      <div class="footer-links">
+        <a href="#services" class="footer-link">Website Design</a>
+        <a href="#services" class="footer-link">Graphic Design</a>
+        <a href="#services" class="footer-link">Packaging</a>
+        <a href="#services" class="footer-link">Intelligence</a>
       </div>
-      <p>We'll make your dream website — and everything else your brand needs.</p>
-      <div class="footer-contact"><span>📞</span> +91 8853 355 153</div>
-      <div class="footer-contact"><span>🌐</span> www.adver.software</div>
     </div>
-    <div class="footer-col">
-      <h5>Services</h5>
-      <a href="#">Website Design</a>
-      <a href="#">Graphic Design</a>
-      <a href="#">Packaging &amp; Print</a>
-      <a href="#">Billboards</a>
-      <a href="#">Comp. Intelligence</a>
+
+    <div>
+      <div class="footer-heading">Company</div>
+      <div class="footer-links">
+        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#philosophy" class="footer-link">Philosophy</a>
+        <a href="#testimonials" class="footer-link">Testimonials</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h5>Company</h5>
-      <a href="#">About Us</a>
-      <a href="#">Our Projects</a>
-      <a href="#">Testimonials</a>
-      <a href="#">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h5>Legal</h5>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Refund Policy</a>
+
+    <div>
+      <div class="footer-heading">Connect</div>
+      <div class="footer-links">
+        <a href="tel:+918853355153" class="footer-link">+91 8853 355 153</a>
+        <span class="footer-link">www.adver.software</span>
+      </div>
+      <div class="footer-socials">
+        <a class="footer-social" title="Coming soon" href="#">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+        </a>
+        <a class="footer-social" title="Coming soon" href="#">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a class="footer-social" title="Coming soon" href="#">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"/></svg>
+        </a>
+        <a class="footer-social" title="Coming soon" href="#">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </a>
+      </div>
     </div>
   </div>
+
   <div class="footer-bottom">
-    <p>© 2024 adver.software · All rights reserved.</p>
-    <div>🇮🇳 &nbsp;🇺🇸 &nbsp;🇲🇾</div>
+    <p>© 2025 adver.software</p>
+    <p>Designed &amp; built by adver.software</p>
   </div>
 </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="script.js"></script>
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>
